@@ -1,0 +1,12 @@
+<form method="POST" action="/create">
+  <input type="text" name="name">
+  <input type="text" name="address">
+  <input type="submit" value="create!">
+</form>
+<ul>
+  <%@rest.each do |item|%>
+    <li>
+      <a href="/restaurant/<%= item.id %>"><%=item.name%></a>
+    </li>
+  <%end%>
+</ul>
